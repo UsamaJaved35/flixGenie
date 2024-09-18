@@ -45,12 +45,12 @@ const Header=()=>{
     },[])
     return(
         <>
-        <div className="absolute px-8 py-2 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.9)] md:bg-gradient-to-b md:from-black z-40 w-screen flex md:flex-row justify-between">
-            <img className="w-44 mx-auto md:mx-0" src={NETFLIX_LOGO}
+        <div className="absolute px-8 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.9)] md:bg-gradient-to-b md:from-black z-40 w-screen flex md:flex-row justify-between">
+            <img className="w-36 -mt-6 -ml-10 mx-auto md:mx-0 md:w-48" src={`${process.env.PUBLIC_URL}/main_logo.png`}
             alt="logo"/>
        {user && 
        <>
-       <div className="flex p-6 md:bg-transparent">
+       <div className="flex p-6 md:p-14 md:bg-transparent">
         <button className="text-white hidden md:block bg-purple-700 px-4 py-2 rounded-lg mx-2 md:h" onClick={handleGptSearchClick}>
            {showGptSearchView ? "Home" :"Gpt Search" }
         </button>

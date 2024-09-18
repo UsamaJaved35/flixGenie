@@ -4,7 +4,6 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch,useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useEffect, useState } from "react";
-import { NETFLIX_LOGO } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 const Header=()=>{
     const navigate = useNavigate();

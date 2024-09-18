@@ -24,6 +24,7 @@ const MoviePlayer = () => {
       </button>
       <iframe className='w-full h-full'
         src={movieUrl}
+        title="Movie Player"
         width="100%" height="100%" frameBorder="0" allowFullScreen>
       </iframe>
     </div>

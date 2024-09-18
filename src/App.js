@@ -1,7 +1,5 @@
 import { Provider } from 'react-redux';
 import Body from './components/Body';
-import { auth } from './utils/firebase';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import appStore from './utils/appStore';
 import Footer from './components/Footer';
 

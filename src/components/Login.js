@@ -17,26 +17,30 @@ const Login=()=>{
         setIsSignInForm(!IsSignInForm)
     }
     const handleSubmit=()=>{
-        const error = validateData(email.current.value,password.current.value)
-        if(!error){
             if(!IsSignInForm){
-                createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    updateProfile(user, {
-                    displayName: name.current.value , photoURL: USER_AVATAR
-                    }).then(() => {
-                        const {uid , email , displayName , photoURL} = auth.currentUser
-                        dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
-                    }).catch((error) => {
-                        setErrMsg(error.message)
+                const error = validateData(email.current.value,password.current.value)
+                if(!error){
+                    createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+                        updateProfile(user, {
+                        displayName: name.current.value , photoURL: USER_AVATAR
+                        }).then(() => {
+                            const {uid , email , displayName , photoURL} = auth.currentUser
+                            dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
+                        }).catch((error) => {
+                            setErrMsg(error.message)
+                        });
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        setErrMsg(errorCode+ " " +errorMessage)
                     });
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    setErrMsg(errorCode+ " " +errorMessage)
-                });
+                }
+                else{
+                    setErrMsg(error)
+                }
             }
             else{
                 signInWithEmailAndPassword(auth, email.current.value, password.current.value)
@@ -49,10 +53,6 @@ const Login=()=>{
                 });
             }
         }
-        else{
-            setErrMsg(error)
-        }
-    }
     return(
         <>
         <Header/>

@@ -72,7 +72,7 @@ const Login=()=>{
             <input type="password" ref={password} required placeholder="Enter Your Password" className="p-2 my-2 w-full bg-gray-700"/>
             <p className="text text-red-500 font-bold text-lg py-2">{errorMsg}</p>
             <button type="submit" className="p-4 my-4 w-full bg-red-600" onClick={handleSubmit}>{IsSignInForm ? "Sign In": "Sign Up"}</button>
-            <p className="m-2 p-2 cursor-pointer font-bold" onClick={handleToggle}>{IsSignInForm ? <>New to Netflix? <u>Sign Up now.</u></>:<> Already Registered? <u>Sign In now</u>. </>}</p>
+            <p className="m-2 p-2 cursor-pointer font-bold" onClick={handleToggle}>{IsSignInForm ? <>New to FlixGenie? <u>Sign Up now.</u></>:<> Already Registered? <u>Sign In now</u>. </>}</p>
         </div>
         </>
     );

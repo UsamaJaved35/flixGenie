@@ -45,7 +45,7 @@ const GptSearchBar = () => {
 
   return (
     <>
-    <div className='pt-[10%] flex justify-center'>
+    <div className='pt-[10%] mt-8 md:mt-0 flex justify-center'>
         {/* <RedToast message={"No Recommendations Found"}/> */}
         <form className='w-[95%] md:w-1/2 bg-black grid grid-cols-12' onSubmit={(e)=>e.preventDefault()} >
             <input type='text' className='p-4 m-4 col-span-9' placeholder='What would you like to watch?'/>

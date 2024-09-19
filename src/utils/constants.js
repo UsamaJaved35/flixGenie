@@ -11,3 +11,14 @@ export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 export const BG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/814ad112-c8fb-4277-aaed-9635fef7a1bc/PK-en-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg";
 export const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY
 export const TMDB_MOVIE_API = "https://autoembed.co/movie/tmdb/";
+
+export const FIREBASE_ERROR_MESSAGES = {
+  'auth/email-already-in-use': 'This email is already in use. Please try a different one.',
+  'auth/invalid-email': 'The email address is not valid. Please enter a valid email.',
+  'auth/operation-not-allowed': 'Sign-in is currently disabled. Please contact support.',
+  'auth/weak-password': 'The password is too weak. Please use a stronger password.',
+  'auth/user-disabled': 'This user account has been disabled. Please contact support.',
+  'auth/user-not-found': 'No account found with this email. Please sign up first.',
+  'auth/wrong-password': 'The password is incorrect. Please try again.',
+  'auth/invalid-credential' : 'Email or Password is incorrect 🥺'
+};
